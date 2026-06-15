@@ -1,0 +1,32 @@
+Blast Furnace Blower - Equipment Manual
+Equipment: BF-001 Blast Furnace Blower
+Manufacturer: Tata Steel OEM
+
+OVERVIEW
+The blast furnace blower provides combustion air to the blast furnace. Failure results in immediate production stoppage with estimated downtime cost of $125,000/hour.
+
+TECHNICAL SPECIFICATIONS
+- Rated power: 2500 kW
+- Operating temperature range: 55-90°C
+- Normal vibration: 2.0-5.0 mm/s
+- Design pressure: 100-140 psi
+
+PREVENTIVE MAINTENANCE SCHEDULE
+- Daily: Visual inspection, temperature and vibration check
+- Weekly: Belt tension verification, filter inspection
+- Monthly: Bearing lubrication, alignment check
+- Quarterly: Full vibration spectrum analysis
+
+COMMON FAILURE MODES
+1. Impeller erosion - causes vibration increase and pressure drop
+2. Bearing failure - caused by contamination or insufficient lubrication
+3. Drive belt wear - causes speed fluctuation and current oscillation
+
+RECOMMENDED ACTIONS FOR DEGRADATION
+When health indicator drops below 70:
+- Increase monitoring frequency to every 4 hours
+- Schedule impeller inspection within 72 hours
+- Verify spare belt availability (Part: BLT-A42)
+
+SAFETY
+Always lockout/tagout before maintenance. Allow 30-minute cooldown before bearing inspection.

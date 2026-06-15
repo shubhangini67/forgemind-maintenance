@@ -1,0 +1,43 @@
+# Docker / secrets
+.env
+backend/.env
+backend/.env.local
+frontend/.env.local
+
+# Python
+backend/.venv/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+*.log
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+
+# Local SQLite (cloud uses Postgres)
+data/spmw.db
+
+# ML models — regenerated on bootstrap from C-MAPSS FD001
+backend/models/*.joblib
+backend/app/models/*.joblib
+backend/app/models/train_metrics.json
+
+# Vector store — rebuilt on bootstrap
+data/vector_store.json
+
+# C-MAPSS dataset extras (keep train_FD001.txt + RUL_FD001.txt only)
+data/cmapss/CMAPSSData.zip
+data/cmapss/**/*.zip
+data/cmapss/*.pdf
+data/cmapss/train_FD00[234].txt
+data/cmapss/test_FD*.txt
+data/cmapss/RUL_FD00[234].txt
+
+# OS
+.DS_Store
+
+# Keep example env templates (no secrets)
+!.env.example
+!backend/.env.docker
+!backend/.env.docker.hybrid

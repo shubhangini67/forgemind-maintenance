@@ -1,0 +1,39 @@
+Rolling Mill Motor - Standard Operating Procedure (SOP)
+Equipment: RM-002 Rolling Mill Motor
+Location: Hot Rolling Mill
+
+1. STARTUP CHECKLIST
+- Verify motor current is within 45-65A range at nominal load
+- Check vibration levels below 4.0 mm/s RMS
+- Confirm bearing temperature below 75°C
+- Inspect lubrication system oil level and flow rate
+
+2. NORMAL OPERATING PARAMETERS
+- Temperature: 60-75°C
+- Vibration: 1.5-4.0 mm/s
+- Pressure (cooling): 90-130 psi
+- Motor current: 45-65A
+
+3. ALARM THRESHOLDS
+- Vibration > 6.0 mm/s: WARNING - schedule inspection within 24 hours
+- Vibration > 8.0 mm/s: CRITICAL - stop motor and inspect bearings
+- Temperature > 85°C: WARNING - check cooling system
+- Temperature > 95°C: CRITICAL - emergency shutdown
+
+4. BEARING MAINTENANCE
+- Lubricate bearings every 500 operating hours with ISO VG 220 oil
+- Replace bearings every 8000 hours or upon vibration exceedance
+- Common fault code E-2041 indicates bearing overheating
+
+5. TROUBLESHOOTING
+Symptom: High vibration + elevated temperature
+Probable cause: Bearing wear or misalignment
+Action: Perform vibration analysis, inspect coupling alignment, check bearing clearance
+
+Symptom: Motor current spike without load change
+Probable cause: Winding insulation degradation or rotor bar crack
+Action: Perform insulation resistance test (megger), schedule motor overhaul
+
+6. SPARE PARTS
+- Bearing 6205-2RS (Part: BRG-6205) - reorder at 5 units
+- 75kW Motor Winding Kit (Part: MTR-75K) - lead time 30 days

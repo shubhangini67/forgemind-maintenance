@@ -1,0 +1,438 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tata-blue: #005da4;
+  --tata-blue-dark: #004a85;
+  --tata-blue-light: #006bb8;
+  --tata-menu: #8ad4f0;
+  --bg: #f7f9fc;
+  --panel: #ffffff;
+  --border: #d8e4ef;
+  --text: #1c2434;
+  --muted: #5c6b82;
+  --accent: #005da4;
+  --surface-gradient: linear-gradient(135deg, #ffffff 0%, #f0f7fd 55%, #e8f2fa 100%);
+}
+
+body {
+  font-family: var(--font-inter), "Inter", "Segoe UI", system-ui, sans-serif;
+  @apply bg-tata-bg text-tata-ink antialiased;
+}
+
+@layer components {
+  .page-wrap {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  .page-bg {
+    @apply bg-tata-bg bg-grid-pattern bg-grid;
+  }
+
+  .page-header {
+    @apply mb-8;
+  }
+
+  /* Unified surface — same gradient everywhere */
+  .surface {
+    @apply rounded-xl border border-tata-border/90 bg-gradient-to-br from-white via-white to-tata-blue-pale/70 shadow-card;
+  }
+
+  .surface-hover {
+    @apply transition-all duration-200 hover:-translate-y-0.5 hover:border-tata-blue/20 hover:shadow-panel;
+  }
+
+  .panel {
+    @apply surface p-6;
+  }
+
+  .panel-flush {
+    @apply surface overflow-hidden p-0;
+  }
+
+  .panel-header {
+    @apply mb-5 flex flex-wrap items-center justify-between gap-3 border-b border-tata-border/60 pb-4;
+  }
+
+  .panel-title {
+    @apply text-base font-semibold text-tata-ink;
+  }
+
+  .panel-desc {
+    @apply mt-0.5 text-xs leading-relaxed text-tata-muted;
+  }
+
+  .section-stack {
+    @apply flex flex-col gap-6;
+  }
+
+  .stat-grid {
+    @apply grid gap-4;
+  }
+
+  .stat-card,
+  .stat-card-plain {
+    @apply surface surface-hover relative p-5;
+  }
+
+  .stat-label {
+    @apply text-[11px] font-semibold uppercase tracking-[0.12em] text-tata-muted;
+  }
+
+  .stat-value {
+    @apply mt-1 text-2xl font-semibold tabular-nums tracking-tight text-tata-ink sm:text-[1.65rem];
+  }
+
+  .metric-tile {
+    @apply surface-hover flex items-center gap-3 bg-gradient-to-br from-white to-tata-blue-pale/50 px-4 py-3.5;
+  }
+
+  .card {
+    @apply surface p-6;
+  }
+
+  .card-dark {
+    @apply rounded-xl border border-tata-border bg-gradient-to-br from-tata-blue-pale to-white p-6;
+  }
+
+  .card-glass {
+    @apply surface p-6 backdrop-blur-sm;
+  }
+
+  .module-card {
+    @apply surface surface-hover relative flex flex-col overflow-hidden;
+  }
+
+  .module-card-accent {
+    @apply h-1 w-full bg-gradient-to-r from-tata-blue via-tata-blue-light to-tata-menu;
+  }
+
+  .module-card-body {
+    @apply flex flex-1 flex-col p-6;
+  }
+
+  .module-icon-wrap {
+    @apply mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-tata-blue/10 text-tata-blue transition;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-tata-blue px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] text-white shadow-sm transition hover:bg-tata-blue-dark disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-tata-blue/30 bg-white px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] text-tata-blue transition hover:bg-tata-blue-pale/80;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-tata-muted transition hover:bg-tata-blue-pale/60 hover:text-tata-blue;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-tata-border bg-white px-4 py-2.5 text-sm text-tata-ink outline-none placeholder:text-steel-300 focus:border-tata-blue focus:ring-2 focus:ring-tata-blue/15;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-md px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide;
+  }
+
+  .breadcrumb-bar {
+    @apply border-b border-tata-border/80 bg-white/90 px-4 py-2.5 text-xs text-tata-muted backdrop-blur-sm sm:px-6;
+  }
+
+  .data-table {
+    @apply w-full text-left text-sm;
+  }
+
+  .data-table th {
+    @apply border-b-2 border-tata-border pb-3 text-[11px] font-semibold uppercase tracking-wider text-tata-muted;
+  }
+
+  .data-table td {
+    @apply border-b border-tata-border/50 py-4 text-tata-ink/90;
+  }
+
+  .data-table tbody tr {
+    @apply transition hover:bg-tata-blue-pale/25;
+  }
+
+  .data-table tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .equipment-table {
+    @apply w-full min-w-[880px] table-fixed border-collapse text-left text-sm;
+  }
+
+  .equipment-table th {
+    @apply border-b border-tata-border bg-white/70 px-4 py-3 text-[11px] font-semibold uppercase tracking-wider text-tata-muted;
+  }
+
+  .equipment-table td {
+    @apply border-b border-tata-border/50 px-4 py-3 align-middle text-tata-ink/90;
+  }
+
+  .equipment-table tbody tr {
+    @apply transition hover:bg-tata-blue-pale/25;
+  }
+
+  .equipment-table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .hero-stat-col {
+    @apply relative py-8 sm:px-10 sm:py-0;
+  }
+
+  .hero-stat-col + .hero-stat-col {
+    @apply sm:border-l sm:border-white/10;
+  }
+
+  .fleet-chip {
+    @apply surface surface-hover block p-4;
+  }
+
+  .chat-bubble-user {
+    @apply max-w-[min(100%,28rem)] rounded-2xl rounded-br-md bg-gradient-to-br from-tata-blue to-tata-blue-light px-4 py-2.5 text-white shadow-sm;
+  }
+
+  .chat-bubble-assistant {
+    @apply max-w-[min(100%,36rem)] rounded-2xl rounded-bl-md border border-tata-border/80 bg-white px-4 py-3 text-tata-ink shadow-sm;
+  }
+
+  .chat-bubble-assistant .prose-chat {
+    @apply max-w-none;
+  }
+
+  .chat-row-user {
+    @apply max-w-[min(100%,28rem)] items-end;
+  }
+
+  .chat-row-assistant {
+    @apply max-w-[min(100%,36rem)] items-start;
+  }
+
+  .chat-thread {
+    @apply px-1;
+  }
+
+  .chat-prompt-chip {
+    @apply rounded-lg border border-tata-border/80 bg-gradient-to-br from-white to-tata-blue-pale/40 px-3 py-2.5 text-left text-xs font-medium text-tata-ink transition hover:border-tata-blue/30 hover:shadow-sm;
+  }
+
+  .chat-suggestion-chip {
+    @apply rounded-full border border-tata-blue/20 bg-gradient-to-br from-white to-tata-blue-pale/60 px-3.5 py-1.5 text-xs font-medium text-tata-ink shadow-sm transition hover:border-tata-blue/40 hover:shadow-md hover:-translate-y-px;
+  }
+
+  .chat-link-chip {
+    @apply rounded-full border border-emerald-500/25 bg-gradient-to-br from-emerald-50 to-white px-3.5 py-1.5 text-xs font-medium text-emerald-800 shadow-sm transition hover:border-emerald-500/40 hover:shadow-md hover:-translate-y-px;
+  }
+
+  .chat-input-shell {
+    @apply rounded-2xl bg-white shadow-[0_2px_12px_-2px_rgba(0,93,164,0.12)] ring-1 ring-tata-border/60 focus-within:ring-2 focus-within:ring-tata-blue/30;
+  }
+
+  .chat-mode-banner-plant {
+    @apply border-b border-sky-100 bg-gradient-to-r from-sky-50 via-white to-sky-50/50;
+  }
+
+  .chat-mode-banner-asset {
+    @apply border-b border-amber-100 bg-gradient-to-r from-amber-50/80 via-white to-orange-50/40;
+  }
+
+  .chat-welcome-card {
+    @apply rounded-2xl border border-tata-border/50 bg-white/80 p-6 shadow-[0_8px_30px_-12px_rgba(0,93,164,0.15)] backdrop-blur-sm;
+  }
+
+  .chat-empty-icon {
+    @apply flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-tata-blue to-tata-blue-light text-white shadow-md;
+  }
+
+  .ai-fab {
+    @apply fixed bottom-6 right-6 z-[45] flex items-center gap-2.5 overflow-hidden rounded-2xl bg-gradient-to-br from-tata-blue via-[#0068b8] to-tata-blue-light py-2.5 pl-2.5 pr-4 text-white shadow-[0_10px_40px_-6px_rgba(0,93,164,0.6)] ring-2 ring-white/25 transition hover:scale-[1.02] hover:shadow-[0_14px_44px_-4px_rgba(0,93,164,0.65)] active:scale-[0.98];
+  }
+
+  .ai-fab-icon {
+    @apply relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 shadow-inner ring-1 ring-white/30 backdrop-blur-sm transition;
+  }
+
+  .ai-fab-pulse {
+    @apply absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-emerald-400 ring-2 ring-white/80;
+    animation: pulse-live 1.8s ease-in-out infinite;
+  }
+
+  .ai-fab:hover .ai-fab-icon {
+    @apply bg-white/20;
+  }
+
+  .ai-fab-chevron {
+    @apply transition;
+  }
+
+  .ai-fab:hover .ai-fab-chevron {
+    transform: translateX(0.125rem);
+  }
+}
+
+.prose-chat p {
+  @apply mb-2 leading-relaxed text-tata-ink/90;
+}
+
+.prose-chat h2 {
+  @apply mb-2 mt-4 text-base font-semibold text-tata-blue;
+}
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.animate-pulse-live {
+  animation: pulse-live 2s ease-in-out infinite;
+}
+
+@keyframes nav-progress {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(420%); }
+}
+
+.nav-progress-bar {
+  animation: nav-progress 1.1s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.45s ease-out both;
+}
+
+/* Login page — industrial command center */
+@keyframes login-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes login-particle-float {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.6);
+  }
+  15% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh) scale(1);
+  }
+}
+
+@keyframes login-status-glow {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 6px 1px rgba(52, 211, 153, 0.65);
+  }
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 2px 0 rgba(52, 211, 153, 0.25);
+  }
+}
+
+@keyframes login-simulator-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 40px -8px rgba(0, 93, 164, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 52px -4px rgba(56, 189, 248, 0.35);
+  }
+}
+
+.login-fade-in {
+  animation: login-fade-in 0.65s ease-out both;
+}
+
+.login-fade-in-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.login-fade-in-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.login-fade-in-delay-3 {
+  animation-delay: 0.24s;
+}
+
+.login-fade-in-delay-4 {
+  animation-delay: 0.32s;
+}
+
+.login-particle {
+  animation: login-particle-float linear infinite;
+}
+
+.login-status-glow {
+  animation: login-status-glow 2.4s ease-in-out infinite;
+}
+
+.login-simulator-highlight {
+  animation: login-simulator-pulse 4s ease-in-out infinite;
+}
+
+.login-glass-panel {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.04) 100%);
+  backdrop-filter: blur(16px);
+}
+
+.login-input {
+  @apply w-full rounded-lg border border-white/15 bg-black/30 px-4 py-2.5 text-sm text-white outline-none placeholder:text-white/30 focus:border-sky-400/50 focus:ring-2 focus:ring-sky-400/20;
+}
+
+.login-capability-card,
+.login-role-card,
+.login-submit-btn {
+  @apply transition duration-200;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surface-hover,
+  .module-card,
+  .stat-card,
+  .stat-card-plain,
+  .metric-tile {
+    transition: none;
+  }
+
+  .surface-hover:hover,
+  .module-card:hover,
+  .stat-card:hover,
+  .stat-card-plain:hover,
+  .metric-tile:hover {
+    transform: none;
+  }
+
+  .animate-fade-up,
+  .login-fade-in,
+  .login-particle,
+  .login-status-glow,
+  .login-simulator-highlight {
+    animation: none;
+  }
+}
+
+.terminal-log {
+  @apply font-mono text-xs leading-relaxed text-emerald-700;
+}

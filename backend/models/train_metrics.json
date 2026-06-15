@@ -1,0 +1,7 @@
+{
+  "dataset": "NASA C-MAPSS FD001",
+  "samples": 20631,
+  "rul_mae_hours": 168.18,
+  "engines": 100,
+  "model_version": "xgb-cmapss-v1"
+}

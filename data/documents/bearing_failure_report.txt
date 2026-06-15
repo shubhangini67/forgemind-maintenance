@@ -1,0 +1,37 @@
+Failure Analysis Report - Rolling Mill Motor Bearing Failure
+Report ID: FAR-2025-0142
+Equipment: RM-002 Rolling Mill Motor
+Date: 2025-03-15
+
+INCIDENT SUMMARY
+The rolling mill motor experienced unplanned shutdown due to bearing failure. Fault code E-2041 was triggered when vibration exceeded 8.2 mm/s and bearing temperature reached 102°C.
+
+SYMPTOMS OBSERVED
+- Vibration increased from 3.1 to 8.2 mm/s over 48 hours
+- Temperature rose from 68°C to 102°C
+- Motor current increased by 12% without load change
+- Audible grinding noise from drive end bearing
+
+ROOT CAUSE ANALYSIS
+Primary cause: Insufficient lubrication due to blocked oil passage in lubrication pump filter.
+Contributing factors:
+1. Lubrication interval exceeded by 120 operating hours
+2. Vibration trending was not flagged early enough
+3. Spare bearing stock was below reorder level (1 unit remaining)
+
+CORRECTIVE ACTIONS TAKEN
+1. Replaced both drive-end and non-drive-end bearings (6205-2RS)
+2. Cleaned and replaced lubrication filter
+3. Updated lubrication schedule in CMMS
+4. Calibrated vibration sensors
+
+RECOMMENDATIONS
+- Implement automated vibration threshold alerts at 6.0 mm/s
+- Maintain minimum 5 bearing units in inventory
+- Perform monthly lubrication system inspection
+- Enable predictive maintenance monitoring on RM-002
+
+DOWNTIME IMPACT
+Total downtime: 12 hours
+Production loss: 480 tons hot rolled coil
+Estimated cost: $180,000

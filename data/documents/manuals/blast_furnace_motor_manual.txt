@@ -1,0 +1,40 @@
+EQUIPMENT MANUAL — BLAST FURNACE MAIN DRIVE MOTOR
+Asset class: BF main drive | SPMW doc: SPMW-MAN-BF-002 | Rev 1.0
+
+=== IDENTIFICATION ===
+Typical tag: BF-001 Main Blower Drive
+Manufacturer reference: ABB M3BP 450 SMB 4
+Power: 520 kW · Voltage: 6.6 kV · Speed: 1490 rpm
+Bearings: SKF 6318/C3 (DE), SKF 6316/C3 (NDE)
+
+=== C-MAPSS CHANNEL MAP ===
+S1 — DE vibration (ISO 10816 Class III foundation)
+S3 — Winding / bearing composite temperature
+Health index derived from FD001-trained XGBoost model in SPMW
+
+=== OPERATING ENVELOPE ===
+Winding temperature: nominal 65–78°C, investigate > 85°C, trip > 105°C
+Bearing temperature: nominal 45–70°C, investigate > 82°C, trip > 95°C
+Vibration S1: nominal < 3.5 mm/s, investigate 3.5–6.0, trip > 11.2 mm/s
+Current imbalance: investigate > 4%, trip > 7%
+
+=== ROUTINE CARE ===
+Shift (operator):
+- Confirm cooling fan running, no abnormal audible tone
+- Record S1/S3 in logbook if SPMW alert open
+
+Weekly (maintenance):
+- IR scan DE/NDE caps
+- Inspect foundation bolts torque marker paint
+
+Quarterly:
+- Oil mist separator on bearing lubrication circuit
+- Megger test stator > 100 MΩ at 500 V
+
+=== SPMW FAULT TAGS ===
+SPMW-F203 — S1 excursion
+SPMW-F307 — S3 thermal rise
+SPMW-F101 — load surge / overcurrent
+
+=== EMERGENCY ===
+Trip on S1 > 11.2 mm/s or S3 > 95°C — do not restart until root cause logged in Advisor Console handover.

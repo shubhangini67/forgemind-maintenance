@@ -1,0 +1,30 @@
+# Frontend — deployed separately on Vercel
+frontend/
+
+# Local dev
+backend/.venv/
+**/__pycache__/
+**/*.pyc
+.pytest_cache/
+backend/tests/
+*.log
+
+# Secrets
+.env
+backend/.env
+
+# Local SQLite
+data/spmw.db
+
+# C-MAPSS extras (runtime only needs FD001)
+data/cmapss/CMAPSSData.zip
+data/cmapss/**/*.zip
+data/cmapss/*.pdf
+data/cmapss/train_FD00[234].txt
+data/cmapss/test_FD*.txt
+data/cmapss/RUL_FD00[234].txt
+
+# Git / docs (not in image)
+.git/
+docs/
+scripts/

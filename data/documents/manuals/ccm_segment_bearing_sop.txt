@@ -1,0 +1,39 @@
+STANDARD OPERATING PROCEDURE — CCM SEGMENT ROLL BEARING ROUTE
+Document: SPMW-SOP-CCM-001 | Rev 1.0 | Owner: Reliability Engineering
+
+=== SCOPE ===
+Inspection, lubrication, and replacement of segment roll bearings on SPMW-monitored CCM strands.
+Applies to assets tagged equipment_type=continuous_caster in Fleet Registry.
+
+=== EQUIPMENT ===
+- CCM-STR-1 / STR-2 / STR-3 segment rolls (positions 1–12 per strand)
+- Bearings: FAG 23264-K-MB (main), FAG 22222-E1 (guide rolls)
+
+=== SPMW ALARM BANDS (mapped S1/S3) ===
+Vibration RMS (S1):
+  Normal: < 4.5 mm/s
+  Investigate: 4.5 – 5.5 mm/s — increase sampling to 15 min
+  Hold cast: > 9.0 mm/s — stop strand after safe tail-out
+
+Bearing temperature (S3):
+  Normal: 42 – 72°C
+  Investigate: 72 – 82°C
+  Hold cast: > 88°C sustained 10 min
+
+=== LUBRICATION (SPMW-F412 prevention) ===
+Grease: Klüberplex BEM 41-132
+1. Lock out strand segment per LOTO-CCM-12
+2. Clean nipple; apply 25 g per point at ≤ 3 bar
+3. Rotate roll 3 revolutions by hand
+4. Log tonnage counter + technician ID in digital logbook
+
+=== REPLACEMENT TRIGGER ===
+Replace bearing when ANY:
+- Hold-cast band exceeded twice in 7 days
+- SPMW RUL < vendor lead time for SKF/FAG equivalent
+- Visual spalling or grease contamination (dark emulsion)
+
+=== POST-WORK VERIFICATION ===
+1. Alignment check ±0.25 mm vs partner roll
+2. Baseline S1 capture within 2 h of restart
+3. Close work order with fault tag cleared in CMMS
